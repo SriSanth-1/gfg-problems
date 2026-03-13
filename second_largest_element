@@ -1,0 +1,17 @@
+class Solution {
+    public int getSecondLargest(int[] arr) {
+        int f_l=-1;
+        int s_l=-1;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>f_l){
+                s_l=f_l;
+                f_l=arr[i];
+            }
+            if(arr[i]>s_l && arr[i]!=f_l){
+                s_l=arr[i];
+            }
+        }
+        return s_l;
+        
+    }
+}

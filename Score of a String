@@ -1,0 +1,13 @@
+class Solution {
+    public int scoreOfString(String s) {
+        int previous=s.charAt(0);
+        int next=0;
+        int ans=0;
+        for(int i=1;i<s.length();i++){
+            next=s.charAt(i);
+    ans+=Math.abs((previous-next));
+    previous=next;
+        }
+        return ans;
+    }
+}
